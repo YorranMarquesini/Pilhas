@@ -3,7 +3,7 @@
 Este projeto implementa um sistema de fila hospitalar para organizar o atendimento de pacientes na ordem de chegada. Cada paciente recebe uma senha única no formato "P<number> - <Nome>", garantindo controle e eficiência no atendimento.
 
 ⚙️ Implementação
-Estrutura de Dados: Utiliza Queue (LinkedList<>) para operações rápidas de inserção e remoção (O(1)).
+Estrutura de Dados: Utiliza Queue (LinkedList<>) para operações rápidas de inserção e remoção.
 
 Funcionalidades:
 ✅ Geração de senha única para cada paciente.
