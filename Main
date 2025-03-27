@@ -1,0 +1,25 @@
+package Navegador;
+
+public class Main {
+	 /**
+     Método principal para executar a simulação da fila do hospital.
+     Adiciona pacientes, exibe a fila e processa os atendimentos até esvaziar a fila.
+     */
+	public static void main(String[] args) {
+        FilaHospital hospital = new FilaHospital();
+
+        hospital.gerarSenha("João");
+        hospital.gerarSenha("Maria");
+        hospital.gerarSenha("Carlos");
+
+        while (!hospital.filaPacientes.isEmpty()) {
+            hospital.exibirFila();
+            hospital.exibirPrimeiro();
+            hospital.exibirQuantidade();
+            hospital.chamarProximo();
+            System.out.println("-------------------------------");
+        }
+
+        System.out.println("Todos os pacientes foram atendidos.");
+    }
+}
