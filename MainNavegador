@@ -1,0 +1,15 @@
+package Navegador;
+
+public class Main {
+	public static void main(String[] args) {
+        Navegador navegador = new Navegador();
+        
+        navegador.acessarPagina("google.com");
+        navegador.acessarPagina("youtube.com");
+        navegador.acessarPagina("github.com");
+        
+        navegador.voltar();
+        navegador.voltar();
+        navegador.avancar();
+    }
+}
