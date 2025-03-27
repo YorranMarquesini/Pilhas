@@ -1,0 +1,65 @@
+package Navegador;
+import java.util.LinkedList;
+import java.util.Queue;
+/**
+ Classe que simula um sistema de fila de hospital.
+ Utiliza uma fila para gerenciar os pacientes em ordem de chegada.
+ */
+public class FilaHospital {
+    public Queue<String> filaPacientes;
+    private int contadorSenhas;
+    /**
+     inicializa a fila e o contador de senhas.
+    */
+    public FilaHospital() {
+        filaPacientes = new LinkedList<>();
+        contadorSenhas = 1;
+    }
+    /**
+     Gera uma senha para um paciente e o adiciona à fila.
+    */
+    public void gerarSenha(String nome) {
+        String senha = "P" + contadorSenhas + " - " + nome;
+        filaPacientes.add(senha);
+        contadorSenhas++;
+        System.out.println("Senha gerada: " + senha);
+    }
+    /**
+     Chama o próximo paciente da fila.
+     Se a fila estiver vazia, exibe uma mensagem informando.
+     */
+    public void chamarProximo() {
+        if (filaPacientes.isEmpty()) {
+            System.out.println("Nenhum paciente na fila.");
+        } else {
+            String pacienteChamado = filaPacientes.poll();
+            System.out.println("Chamando: " + pacienteChamado);
+        }
+    }
+    /**
+     Exibe todos os pacientes que estão na fila no momento.
+    */
+    public void exibirFila() {
+        if (filaPacientes.isEmpty()) {
+            System.out.println("Fila vazia.");
+        } else {
+            System.out.println("Fila atual: " + filaPacientes);
+        }
+    }
+    /**
+      Exibe o primeiro paciente da fila.
+    */
+    public void exibirPrimeiro() {
+        if (filaPacientes.isEmpty()) {
+            System.out.println("Nenhum paciente na fila.");
+        } else {
+            System.out.println("Primeiro da fila: " + filaPacientes.peek());
+        }
+    }
+    /**
+      Exibe a quantidade de pacientes na fila.
+    */
+    public void exibirQuantidade() {
+        System.out.println("Total de pacientes na fila: " + filaPacientes.size());
+    }
+}
